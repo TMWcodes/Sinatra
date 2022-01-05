@@ -10,5 +10,4 @@ ruby '3.1.0'
 
 gem 'webrick'
 gem 'sinatra'
-
 gem 'sinatra-contrib'
