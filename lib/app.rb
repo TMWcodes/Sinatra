@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/reloader' #if development?
+require 'sinatra/reloader' if development?
 
 
 get '/' do "hello world" end
@@ -11,8 +11,12 @@ get '/random-cat' do
   erb(:index)
 end
 
-get '/named-cat' do
+post '/named-cat' do
   p params
   @name = params[:name]
   erb(:index)
+end
+
+get '/cat-form' do
+  erb(:cat_form)
 end
